@@ -111,7 +111,7 @@
     <div class="brand">Rumo · Bússola Digital</div>
     <h1>Política de Privacidade</h1>
     <div class="meta">
-      <strong>Última atualização:</strong> 28 de abril de 2026<br>
+      <strong>Última atualização:</strong> 26 de maio de 2026<br>
       <strong>Aplicativo:</strong> Rumo (com.bussoladigital.rumo)<br>
       <strong>Desenvolvedor:</strong> Bússola Digital<br>
       <strong>Contato:</strong> <a href="mailto:luishlbarreto@gmail.com">luishlbarreto@gmail.com</a>
@@ -160,14 +160,60 @@
     </ul>
     <p>Se você não inserir uma chave da API, <strong>nenhum dado sai do seu celular</strong>.</p>
 
-    <h2>4. Backup e exportação de dados</h2>
+    <h2>4. Integração com Google Health Connect (opcional, Android)</h2>
+    <p>O Rumo oferece integração opcional com o <strong>Google Health Connect</strong> — a plataforma do Google que centraliza dados de saúde de múltiplos apps (Samsung Health, Fitbit, Strava, balanças Bluetooth, relógios etc.).</p>
+    <p><strong>Esta integração é totalmente opcional</strong> e só funciona se você ativá-la manualmente em Configurações → Saúde Conectada e autorizar cada tipo de dado individualmente.</p>
+
+    <h3 style="font-size: 16px; margin-top: 20px;">Tipos de dados acessados</h3>
+    <p>Quando você ativa a integração, o Rumo pode <strong>ler</strong> os seguintes dados do Health Connect:</p>
+    <table>
+      <thead>
+        <tr><th>Tipo de dado</th><th>Como o Rumo usa</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Peso (Weight)</td><td>Atualiza seu histórico de peso no app automaticamente</td></tr>
+        <tr><td>Passos (Steps)</td><td>Ajusta o gasto calórico estimado do dia</td></tr>
+        <tr><td>Calorias ativas (ActiveCaloriesBurned)</td><td>Refinar a meta calórica do Coach Nutricional</td></tr>
+        <tr><td>Sessões de exercício (ExerciseSession)</td><td>Importa treinos feitos em outros apps para seu histórico</td></tr>
+        <tr><td>Hidratação (Hydration)</td><td>Soma à sua meta de água do dia</td></tr>
+        <tr><td>Batimentos cardíacos (HeartRate)</td><td>Informativo, complementa análise de evolução</td></tr>
+        <tr><td>Sono (SleepSession)</td><td>Informativo, complementa análise de evolução</td></tr>
+      </tbody>
+    </table>
+    <p>E pode <strong>escrever</strong> os seguintes dados no Health Connect (para que outros apps e relógios reconheçam suas atividades feitas no Rumo):</p>
+    <ul>
+      <li>Peso registrado no Rumo</li>
+      <li>Treinos completados no Rumo</li>
+      <li>Hidratação registrada no Rumo</li>
+    </ul>
+
+    <h3 style="font-size: 16px; margin-top: 20px;">O que NÃO fazemos com esses dados</h3>
+    <ul>
+      <li><strong>NÃO transmitimos</strong> dados de saúde para servidores nossos. A integração é totalmente local — Rumo conversa diretamente com o Health Connect, sem intermediação da Bússola Digital.</li>
+      <li><strong>NÃO compartilhamos</strong> dados de saúde com terceiros.</li>
+      <li><strong>NÃO usamos</strong> dados de saúde para publicidade, marketing ou perfilamento.</li>
+      <li><strong>NÃO vendemos</strong> dados de saúde, em hipótese alguma.</li>
+    </ul>
+
+    <h3 style="font-size: 16px; margin-top: 20px;">Como revogar acesso</h3>
+    <p>Você pode revogar permissões a qualquer momento:</p>
+    <ul>
+      <li>No próprio Rumo: Configurações → Saúde Conectada → desativar tipos individualmente ou desconectar tudo.</li>
+      <li>No app Health Connect (Google): Configurações → Permissões e dados → Rumo → revogar.</li>
+    </ul>
+    <p>A desinstalação do Rumo também encerra todo acesso aos dados.</p>
+
+    <h3 style="font-size: 16px; margin-top: 20px;">Conformidade</h3>
+    <p>Esta integração segue os requisitos da <a href="https://developer.android.com/health-and-fitness/guides/health-connect/develop/data-sources#policy-requirements" target="_blank" rel="noopener">Health Connect by Android Developer Policy</a> e da <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
+
+    <h2>5. Backup e exportação de dados</h2>
     <p>O Rumo permite que você exporte seus dados manualmente em formato JSON ou XLSX. <strong>Esses arquivos são gerados localmente</strong> e ficam sob seu controle — você decide se compartilha, salva na nuvem ou apaga.</p>
     <p>A Bússola Digital <strong>não recebe nem armazena</strong> esses backups.</p>
 
-    <h2>5. Crianças</h2>
+    <h2>6. Crianças</h2>
     <p>O Rumo <strong>não é destinado a menores de 13 anos</strong>. Não coletamos intencionalmente dados de crianças. Se você é responsável por uma criança que esteja usando o app, entre em contato pelo e-mail acima para solicitar a desinstalação.</p>
 
-    <h2>6. Seus direitos (LGPD)</h2>
+    <h2>7. Seus direitos (LGPD)</h2>
     <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de:</p>
     <ul>
       <li><strong>Acessar</strong> todos os seus dados (já estão no seu celular, dentro do app)</li>
@@ -177,10 +223,10 @@
     </ul>
     <p>Como não armazenamos nada em servidores nossos, <strong>a desinstalação do app remove permanentemente todos os seus dados</strong>.</p>
 
-    <h2>7. Alterações nesta política</h2>
+    <h2>8. Alterações nesta política</h2>
     <p>Podemos atualizar esta política eventualmente. Quando isso acontecer, a data no topo do documento será modificada e, se a mudança for relevante, avisaremos pelo próprio aplicativo.</p>
 
-    <h2>8. Contato</h2>
+    <h2>9. Contato</h2>
     <p>Dúvidas, reclamações ou pedidos relacionados a esta política:</p>
     <div class="footer-contact">
       <strong>E-mail:</strong> <a href="mailto:luishlbarreto@gmail.com">luishlbarreto@gmail.com</a><br>
