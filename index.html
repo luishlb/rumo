@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidade — Rumo</title>
-  <meta name="description" content="Política de Privacidade do aplicativo Rumo, da Bússola Digital. App offline de bem-estar — seus dados ficam no seu celular.">
+  <meta name="description" content="Política de Privacidade do aplicativo Rumo, da Bússola Digital. App de bem-estar com recursos de IA.">
   <style>
     :root {
       --cream: #FAF8F5;
@@ -111,122 +111,102 @@
     <div class="brand">Rumo · Bússola Digital</div>
     <h1>Política de Privacidade</h1>
     <div class="meta">
-      <strong>Última atualização:</strong> 26 de maio de 2026<br>
+      <strong>Última atualização:</strong> 4 de junho de 2026<br>
       <strong>Aplicativo:</strong> Rumo (com.bussoladigital.rumo)<br>
       <strong>Desenvolvedor:</strong> Bússola Digital<br>
       <strong>Contato:</strong> <a href="mailto:luishlbarreto@gmail.com">luishlbarreto@gmail.com</a>
     </div>
 
     <div class="resumo">
-      O <strong>Rumo</strong> é um aplicativo offline de bem-estar pessoal. <strong>Todos os seus dados ficam armazenados exclusivamente no seu próprio celular.</strong> Nós, da Bússola Digital, <strong>não temos acesso, não coletamos, não vendemos e não compartilhamos</strong> nenhuma informação sua.
+      O <strong>Rumo</strong> é um aplicativo de bem-estar pessoal. A maior parte dos seus registros (treino, dieta, peso, medicação, fotos de evolução) fica <strong>armazenada no seu próprio celular</strong>. Alguns dados, porém, são processados nos <strong>nossos servidores</strong> para o app funcionar: sua <strong>conta</strong> (login), sua <strong>assinatura</strong> e os <strong>recursos de inteligência artificial</strong>. <strong>Não vendemos seus dados</strong> e só os compartilhamos com prestadores de serviço estritamente necessários.
     </div>
 
-    <h2>1. Dados que o aplicativo armazena no seu celular</h2>
-    <p>O Rumo armazena localmente, no seu próprio dispositivo, as informações que você inserir voluntariamente, incluindo:</p>
+    <h2>1. Dados armazenados no seu celular</h2>
+    <p>O Rumo guarda localmente, no seu dispositivo, as informações que você insere:</p>
     <ul>
       <li>Nome, idade, peso, altura, sexo, objetivos pessoais</li>
-      <li>Registros de treino, dieta e jejum</li>
+      <li>Registros de treino, dieta, hidratação e jejum</li>
       <li>Medicamentos e suplementos cadastrados</li>
-      <li>Fotos de evolução corporal (apenas se você optar por tirá-las)</li>
-      <li>Fotos de receitas médicas e bulas (apenas se você optar por usar a leitura por IA)</li>
-      <li>Histórico de progresso e conquistas</li>
+      <li>Fotos de evolução corporal (apenas se você optar por tirá-las) — protegidas por biometria</li>
+      <li>Histórico de progresso, medidas e conquistas</li>
       <li>Configurações de tema, lembretes e notificações</li>
-      <li>Sua chave da API Gemini (se você optar por usar as funcionalidades de IA), guardada de forma segura no Keychain (iOS) ou Keystore (Android)</li>
     </ul>
-    <p><strong>Esses dados nunca saem do seu celular</strong>, exceto nas situações descritas na seção 3 (uso da IA, opcional).</p>
+    <p>A maior parte desses dados <strong>só sai do seu celular</strong> nas situações descritas nas seções 3 e 4.</p>
 
-    <h2>2. Permissões solicitadas pelo aplicativo</h2>
+    <h2>2. Dados processados nos nossos servidores</h2>
+    <p>Para o app funcionar, processamos no nosso backend (hospedado em Cloudflare e Neon):</p>
+    <table>
+      <thead>
+        <tr><th>Dado</th><th>Quando</th><th>Por quê</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>E-mail e nome</td><td>Ao fazer login com Google ou Apple</td><td>Identificar sua conta. O login é <strong>opcional</strong> — o app também funciona em <strong>modo visitante</strong>, sem conta</td></tr>
+        <tr><td>Status da assinatura</td><td>Ao assinar Plus/Premium</td><td>Liberar recursos pagos. Processado via <strong>RevenueCat</strong> e pela loja (Google Play / App Store)</td></tr>
+        <tr><td>Uso dos recursos de IA</td><td>Ao usar a IA</td><td>Controlar limites de uso e prevenir abuso (quantidade de requisições, sem o conteúdo delas)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>3. Funcionalidades de Inteligência Artificial</h2>
+    <p>Algumas funcionalidades — geração de plano de treino e dieta, análise de prato por foto, leitura de receitas por foto, análise de evolução, insights — usam a <strong>API Gemini, do Google</strong>, através dos <strong>nossos servidores</strong>.</p>
+    <p>Quando você usa um recurso de IA:</p>
+    <ul>
+      <li>Os dados necessários (por exemplo, suas medidas, objetivos, ou a <strong>foto</strong> enviada) são transmitidos do seu celular <strong>para os nossos servidores e, de lá, para a API Gemini do Google</strong>.</li>
+      <li>Esses dados são usados <strong>apenas para gerar a sua resposta</strong>. Pela API paga do Gemini, o Google <strong>não retém</strong> esses dados nem os usa para treinar modelos.</li>
+      <li><strong>Não armazenamos</strong> o conteúdo das suas requisições de IA depois de te responder.</li>
+      <li>O uso pela Google está sujeito à <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</li>
+    </ul>
+    <p>Se você não usar os recursos de IA, <strong>esses dados não são transmitidos</strong>.</p>
+
+    <h2>4. Integração com Google Health Connect (opcional, Android)</h2>
+    <p>O Rumo oferece integração <strong>opcional</strong> com o <strong>Google Health Connect</strong>, ativada manualmente em Configurações → Saúde Conectada. Quando ativada, o Rumo pode <strong>ler</strong> (peso, passos, calorias, exercícios, hidratação) e <strong>escrever</strong> (peso, treinos, hidratação) dados.</p>
+    <p><strong>Importante:</strong> essa integração é <strong>local</strong> — o Rumo conversa diretamente com o Health Connect no seu aparelho. <strong>Não transmitimos os dados do Health Connect para os nossos servidores</strong>, não os compartilhamos com terceiros e não os usamos para publicidade. Você revoga o acesso a qualquer momento no Rumo ou no app Health Connect. Segue a <a href="https://developer.android.com/health-and-fitness/guides/health-connect/develop/data-sources#policy-requirements" target="_blank" rel="noopener">Health Connect by Android Developer Policy</a>.</p>
+
+    <h2>5. Permissões solicitadas</h2>
     <table>
       <thead>
         <tr><th>Permissão</th><th>Por que pedimos</th></tr>
       </thead>
       <tbody>
-        <tr><td>Câmera</td><td>Tirar fotos de evolução corporal, fotos de pratos para análise nutricional e fotos de receitas médicas/bulas para leitura por IA</td></tr>
+        <tr><td>Câmera</td><td>Fotos de evolução, de pratos (análise nutricional) e de receitas (leitura por IA)</td></tr>
         <tr><td>Galeria de fotos</td><td>Selecionar imagens já existentes no seu celular</td></tr>
-        <tr><td>Biometria (Face ID / digital)</td><td>Proteger o acesso às suas fotos privadas, se você ativar essa opção</td></tr>
+        <tr><td>Biometria (Face ID / digital)</td><td>Proteger o acesso às suas fotos privadas, se você ativar</td></tr>
         <tr><td>Notificações</td><td>Lembretes de medicamentos, suplementos e fim de descanso entre séries</td></tr>
-        <tr><td>Áudio (gravação)</td><td>Listada por requisito técnico do componente de câmera, <strong>não utilizada na prática</strong> (gravação de áudio está desativada)</td></tr>
+        <tr><td>Áudio (gravação)</td><td>Listada por requisito técnico do componente de câmera, <strong>não utilizada na prática</strong></td></tr>
       </tbody>
     </table>
-    <p>Você pode revogar qualquer permissão a qualquer momento nas configurações do seu celular.</p>
+    <p>Você pode revogar qualquer permissão nas configurações do celular.</p>
 
-    <h2>3. Funcionalidades de Inteligência Artificial (opcional)</h2>
-    <p>Algumas funcionalidades do app — geração de plano de treino, análise de prato por foto, leitura de receitas médicas e bulas por foto, análise visual de evolução, insights mensais — usam a <strong>API Gemini do Google</strong>. Essas funcionalidades <strong>só são ativadas se você inserir sua própria chave da API Gemini</strong> dentro do app.</p>
-    <p>Quando você usa essas funcionalidades:</p>
+    <h2>6. Compartilhamento com terceiros</h2>
+    <p>Compartilhamos dados apenas com <strong>prestadores de serviço</strong> que processam em nosso nome, na medida necessária para o app funcionar:</p>
     <ul>
-      <li>A requisição é enviada <strong>diretamente do seu celular para os servidores do Google</strong>, usando sua chave pessoal.</li>
-      <li>A Bússola Digital <strong>não intermedeia, não armazena, e não tem visibilidade</strong> sobre essas requisições.</li>
-      <li>O uso dos seus dados pela Google está sujeito à <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a> e aos <a href="https://ai.google.dev/terms" target="_blank" rel="noopener">termos da API Gemini</a>.</li>
+      <li><strong>Google (Gemini)</strong> — processa os dados enviados aos recursos de IA (seção 3)</li>
+      <li><strong>Google / Apple</strong> — autenticação de login</li>
+      <li><strong>RevenueCat</strong> e as <strong>lojas (Google Play / App Store)</strong> — gestão de assinaturas e pagamentos</li>
     </ul>
-    <p>Se você não inserir uma chave da API, <strong>nenhum dado sai do seu celular</strong>.</p>
+    <p><strong>Não vendemos seus dados</strong> e <strong>não os compartilhamos para publicidade</strong>.</p>
 
-    <h2>4. Integração com Google Health Connect (opcional, Android)</h2>
-    <p>O Rumo oferece integração opcional com o <strong>Google Health Connect</strong> — a plataforma do Google que centraliza dados de saúde de múltiplos apps (Samsung Health, Fitbit, Strava, balanças Bluetooth, relógios etc.).</p>
-    <p><strong>Esta integração é totalmente opcional</strong> e só funciona se você ativá-la manualmente em Configurações → Saúde Conectada e autorizar cada tipo de dado individualmente.</p>
+    <h2>7. Backup e exportação de dados</h2>
+    <p>Você pode exportar seus dados em JSON ou XLSX. Esses arquivos são gerados <strong>localmente</strong> e ficam sob seu controle.</p>
 
-    <h3 style="font-size: 16px; margin-top: 20px;">Tipos de dados acessados</h3>
-    <p>Quando você ativa a integração, o Rumo pode <strong>ler</strong> os seguintes dados do Health Connect:</p>
-    <table>
-      <thead>
-        <tr><th>Tipo de dado</th><th>Como o Rumo usa</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Peso (Weight)</td><td>Atualiza seu histórico de peso no app automaticamente</td></tr>
-        <tr><td>Passos (Steps)</td><td>Ajusta o gasto calórico estimado do dia</td></tr>
-        <tr><td>Calorias ativas (ActiveCaloriesBurned)</td><td>Refinar a meta calórica do Coach Nutricional</td></tr>
-        <tr><td>Sessões de exercício (ExerciseSession)</td><td>Importa treinos feitos em outros apps para seu histórico</td></tr>
-        <tr><td>Hidratação (Hydration)</td><td>Soma à sua meta de água do dia</td></tr>
-        <tr><td>Batimentos cardíacos (HeartRate)</td><td>Informativo, complementa análise de evolução</td></tr>
-        <tr><td>Sono (SleepSession)</td><td>Informativo, complementa análise de evolução</td></tr>
-      </tbody>
-    </table>
-    <p>E pode <strong>escrever</strong> os seguintes dados no Health Connect (para que outros apps e relógios reconheçam suas atividades feitas no Rumo):</p>
+    <h2>8. Exclusão de conta e dados</h2>
+    <p>Você pode <strong>excluir sua conta e todos os dados associados</strong> a qualquer momento, dentro do app, em <strong>Configurações → Excluir conta</strong>. A exclusão é imediata e remove seus dados de conta, assinatura e uso dos <strong>nossos servidores</strong>; os dados que ficam apenas no seu dispositivo também são apagados nesse processo. Em caso de dúvida, escreva para <a href="mailto:luishlbarreto@gmail.com">luishlbarreto@gmail.com</a>.</p>
+
+    <h2>9. Idade mínima</h2>
+    <p>O Rumo é destinado a <strong>maiores de 18 anos</strong>. Não coletamos intencionalmente dados de menores de idade.</p>
+
+    <h2>10. Seus direitos (LGPD)</h2>
+    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você pode:</p>
     <ul>
-      <li>Peso registrado no Rumo</li>
-      <li>Treinos completados no Rumo</li>
-      <li>Hidratação registrada no Rumo</li>
+      <li><strong>Acessar</strong> seus dados (os locais estão no app; sobre os do servidor, escreva para o e-mail acima)</li>
+      <li><strong>Corrigir</strong> ou <strong>atualizar</strong> suas informações a qualquer momento</li>
+      <li><strong>Excluir</strong> sua conta e dados (Configurações → Excluir conta, conforme a seção 8)</li>
+      <li><strong>Portar</strong> seus dados (função de exportação dentro do app)</li>
     </ul>
 
-    <h3 style="font-size: 16px; margin-top: 20px;">O que NÃO fazemos com esses dados</h3>
-    <ul>
-      <li><strong>NÃO transmitimos</strong> dados de saúde para servidores nossos. A integração é totalmente local — Rumo conversa diretamente com o Health Connect, sem intermediação da Bússola Digital.</li>
-      <li><strong>NÃO compartilhamos</strong> dados de saúde com terceiros.</li>
-      <li><strong>NÃO usamos</strong> dados de saúde para publicidade, marketing ou perfilamento.</li>
-      <li><strong>NÃO vendemos</strong> dados de saúde, em hipótese alguma.</li>
-    </ul>
+    <h2>11. Alterações nesta política</h2>
+    <p>Podemos atualizar esta política eventualmente. A data no topo será modificada e, se a mudança for relevante, avisaremos pelo aplicativo.</p>
 
-    <h3 style="font-size: 16px; margin-top: 20px;">Como revogar acesso</h3>
-    <p>Você pode revogar permissões a qualquer momento:</p>
-    <ul>
-      <li>No próprio Rumo: Configurações → Saúde Conectada → desativar tipos individualmente ou desconectar tudo.</li>
-      <li>No app Health Connect (Google): Configurações → Permissões e dados → Rumo → revogar.</li>
-    </ul>
-    <p>A desinstalação do Rumo também encerra todo acesso aos dados.</p>
-
-    <h3 style="font-size: 16px; margin-top: 20px;">Conformidade</h3>
-    <p>Esta integração segue os requisitos da <a href="https://developer.android.com/health-and-fitness/guides/health-connect/develop/data-sources#policy-requirements" target="_blank" rel="noopener">Health Connect by Android Developer Policy</a> e da <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a>.</p>
-
-    <h2>5. Backup e exportação de dados</h2>
-    <p>O Rumo permite que você exporte seus dados manualmente em formato JSON ou XLSX. <strong>Esses arquivos são gerados localmente</strong> e ficam sob seu controle — você decide se compartilha, salva na nuvem ou apaga.</p>
-    <p>A Bússola Digital <strong>não recebe nem armazena</strong> esses backups.</p>
-
-    <h2>6. Crianças</h2>
-    <p>O Rumo <strong>não é destinado a menores de 13 anos</strong>. Não coletamos intencionalmente dados de crianças. Se você é responsável por uma criança que esteja usando o app, entre em contato pelo e-mail acima para solicitar a desinstalação.</p>
-
-    <h2>7. Seus direitos (LGPD)</h2>
-    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de:</p>
-    <ul>
-      <li><strong>Acessar</strong> todos os seus dados (já estão no seu celular, dentro do app)</li>
-      <li><strong>Corrigir</strong> ou <strong>atualizar</strong> qualquer informação a qualquer momento</li>
-      <li><strong>Excluir</strong> seus dados (basta desinstalar o aplicativo — tudo é apagado junto)</li>
-      <li><strong>Portar</strong> seus dados (use a função de exportação dentro do app)</li>
-    </ul>
-    <p>Como não armazenamos nada em servidores nossos, <strong>a desinstalação do app remove permanentemente todos os seus dados</strong>.</p>
-
-    <h2>8. Alterações nesta política</h2>
-    <p>Podemos atualizar esta política eventualmente. Quando isso acontecer, a data no topo do documento será modificada e, se a mudança for relevante, avisaremos pelo próprio aplicativo.</p>
-
-    <h2>9. Contato</h2>
+    <h2>12. Contato</h2>
     <p>Dúvidas, reclamações ou pedidos relacionados a esta política:</p>
     <div class="footer-contact">
       <strong>E-mail:</strong> <a href="mailto:luishlbarreto@gmail.com">luishlbarreto@gmail.com</a><br>
